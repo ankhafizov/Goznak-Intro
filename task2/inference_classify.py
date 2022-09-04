@@ -1,6 +1,9 @@
 import tensorflow as tf
 import numpy as np
 from utils.utils import load_mel
+import os
+
+ROOT = os.path.dirname(os.path.realpath(__file__))
 
 
 def predict_single_mel_npy_file(npy_path, model, classes=("clean", "noisy")):
@@ -17,12 +20,12 @@ def predict_single_mel_npy_file(npy_path, model, classes=("clean", "noisy")):
 
 if __name__ == "__main__":
     # ============= Эту часть можно менять ===============================
-    filepaths = ["data/val/clean/264/264_121332_264-121332-0017.npy",
-                 "data/val/clean/614/614_6500_614-6500-0012.npy",
-                 "data/val/noisy/273/273_123248_273-123248-0014.npy",
-                 "data/val/noisy/1154/1154_129975_1154-129975-0005.npy"]
+    filepaths = ["task2/data/val/clean/264/264_121332_264-121332-0017.npy",
+                 "task2/data/val/clean/614/614_6500_614-6500-0012.npy",
+                 "task2/data/val/noisy/273/273_123248_273-123248-0014.npy",
+                 "task2/data/val/noisy/1154/1154_129975_1154-129975-0005.npy"]
 
-    trained_model_filepath = "pretrained_models/classification_clean_noisy"
+    trained_model_filepath = f"{ROOT}/pretrained_models/classification_clean_noisy"
     # ====================================================================
 
     model = tf.keras.models.load_model(trained_model_filepath)
