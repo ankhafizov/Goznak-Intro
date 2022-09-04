@@ -1,13 +1,14 @@
 # Задача 1
 
-Решение задачи 1 в папке `task1\task1.py` (менять input_array)
+Решение задачи 1 в папке `task1\task1.py` (менять input_array).
 
 # Задача 2
 
 Тренировка: 
 - `task2/junior_classification_clean_noisy.ipynb` - задача уровня Junior
 - `task2/middle_sound_denoising.ipynb` - задача уровня Middle
-этапы тренировки + точность на val-выборке подробно расписаны внутри ноутбук-файлов
+
+Этапы тренировки + точность на val-выборке подробно расписаны внутри ноутбук-файлов.
 
 Натренированные модели для инференса:
 - Скачать: https://disk.yandex.ru/d/67LiZOIQGub3CA
